@@ -53,8 +53,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 3rem 1.5rem;
-  max-width: 680px;
+  padding: 4rem 1.5rem 5rem;
+  max-width: 780px;
   width: 100%;
   opacity: 0;
   transform: translateY(24px);
@@ -73,7 +73,13 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #7c3aed;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.4rem;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 2rem;
 }
 
 .heading {
@@ -90,13 +96,65 @@
   font-size: 1.125rem;
   color: #94a3b8;
   line-height: 1.7;
-  max-width: 440px;
+  max-width: 500px;
   margin-bottom: 2.5rem;
+}
+
+/* ── Features grid ── */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+@media (max-width: 560px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.featureCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.featureCard:hover {
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.featureIcon {
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.2rem;
+}
+
+.featureDesc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
 }
 
 /* ── GitHub link ── */
 .githubLink {
-  margin-top: 1.75rem;
+  margin-top: 2.5rem;
   font-size: 0.875rem;
   color: #64748b;
   text-decoration: none;
